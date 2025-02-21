@@ -1,8 +1,5 @@
 <?php
 
-include_once '/var/www/Library/AutoLoad.php';
-include_once '/var/www/batch.e-wallet.jp/data/define.php';
-
 /**
  * SSL証明書の有効期限を取得する
  * @param string $host ドメイン名
@@ -55,8 +52,8 @@ function getSSLExpiryDate($host) {
 }
 
 // 読み込むドメインリストのファイルパス
-$domainFilePath = "/Users/maedaakihiro/prac/ポートフォリオ3/domains.txt";
-$outputFile = "/Users/maedaakihiro/prac/ポートフォリオ3/sslResult.txt";
+$domainFilePath = "/path/to/your/domains.txt";
+$outputFile = "/path/to/your/sslResult.txt";
 
 // ファイルが存在しない場合は処理を中止
 if (!file_exists($domainFilePath)) {
